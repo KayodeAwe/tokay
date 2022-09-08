@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponentComponent } from './Components/navbar-component/navbar-component.component';
 import { MobileNavbarComponent } from './Components/mobile-navbar/mobile-navbar.component';
+import { OtherLinesComponent } from './Components/other-lines/other-lines.component';
 //import { ProgramBookletComponent } from './Components/program-booklet/program-booklet.component';
 //import { HeroComponent } from './Components/hero/hero.component';
 //import { HomepageRoutingModule } from './Pages/homepage/homepage-routing.module';
@@ -14,6 +15,7 @@ import { MobileNavbarComponent } from './Components/mobile-navbar/mobile-navbar.
     AppComponent,
     NavbarComponentComponent,
     MobileNavbarComponent,
+    OtherLinesComponent,
     //HeroComponent
   ],
   imports: [

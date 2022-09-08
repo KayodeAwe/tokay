@@ -7,7 +7,7 @@ import { RegmsgComponent } from './regmsg/regmsg.component';
 
 @NgModule({
   declarations: [
-    RegmsgComponent
+    RegmsgComponent,
   ],
   imports: [
     CommonModule,

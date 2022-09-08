@@ -41,7 +41,7 @@ body {
  .container{
    display: flex;
    justify-content: space-between;
-   padding: 1.8% 3.8%;
+   padding: 1.2% 3.8%;
    align-items: center;
  }
  .otherNavHalf{
