@@ -1,0 +1,103 @@
+.pageBackground{
+  background-color: #ECECEC;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contentInfo{
+  max-width: 1035px;
+   padding-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.titlebar{
+  font-size: 24px;
+  padding: 4.8% 0 1% 0;
+  color: #C79D68;
+}
+
+.programButtons{
+  padding-top: 4%
+}
+.programButtons a{
+  text-decoration: none;
+}
+.programButtons a:focus{
+  outline: none;
+}
+
+.programButtons .OpenBtn{
+  background-color: #DF4407;
+  padding: 8px 100px;
+  color: white;
+  border-radius: 4px 0 0 4px;
+}
+.programButtons .CloseBtn{
+  background-color: #EFC99A;
+  padding: 8px 85px;
+  color: black;
+  border-radius: 0 4px 4px 0;
+}
+
+.programImage a{
+  transition: transform 1s ease-in;
+}
+.programImage a :hover{
+  transform: scale(1.008);
+}
+
+.contentInfo p{
+  color: rgb(87, 87, 87);
+}
+
+small{
+  color: red;
+  font-size: 12px
+}
+
+.is-invalid{
+  border: 1px solid red;
+}
+
+.columnFlex{
+  display: flex;
+  flex-direction: column;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MessageBox{
+  margin-top: 3%;
+  background-color: #FFFBF6;
+  position: relative;
+  padding: 40px 20px;
+}
+
+.messageHeader{
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+
+input{
+  width: 360px;
+  padding: 10px 20px;
+}
+
+input::placeholder{
+  font-size: 16px;
+}
+
+label{
+  margin: 10px 0 5px 0;
+}

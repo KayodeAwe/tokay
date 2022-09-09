@@ -1,0 +1,52 @@
+<div class="pageBackground">
+  <div class="contentInfo">
+      <div class="titlebar">
+        Send Us a Message
+      </div>
+      <p>
+        We understand today is a busy one and you might
+      </p>
+      <p>
+        not be able to interact with us or send your wish directly.
+      </p>
+      <p>
+        We wish to hear from you here
+      </p>
+      <div class="MessageBox">
+        <div class="messageHeader">
+          <p>You are special to us</p>
+        </div>
+        <form [formGroup]= "MessageForm" (ngSubmit) = "onSubmit()">
+
+            <div class="inforDiv">
+              <div class="nameDiv columnFlex">
+                <label class="underS">Name*</label>
+                <input type="text" formControlName = "Name" placeholder="John" class="LDT" [class.is-invalid] = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched)||ErrorForm">
+                <div *ngIf = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched) || ErrorForm">
+                  <small class="error-red" *ngIf = "(MessageForm.get('Name')?.errors) ||ErrorForm" >*Name is required</small>
+                </div>
+              </div>
+              <div class="contactDiv columnFlex">
+                <label class="underS">Contact(<span>Phone number</span>)*</label>
+                <input type="tel" formControlName = "Contact" placeholder="080XXXXXXXX" class="LDT" [class.is-invalid] = "(MessageForm.get('Contact')?.invalid && MessageForm.get('Contact')?.touched)||ErrorForm">
+                <div *ngIf = "(MessageForm.get('Contact')?.invalid && MessageForm.get('Contact')?.touched) ||ErrorForm">
+                  <small class="error-red" *ngIf = "(MessageForm.get('Contact')?.errors) ||ErrorForm" >*Contact is required</small>
+                </div>
+              </div>
+              <div class="messageDiv columnFlex">
+                <label class="underS">Message(<span>Optional</span>)*</label>
+                <textarea formControlName = "Message" id="" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+
+            <div class="Submitbutton">
+              <button type="submit">Submit</button>
+            </div>
+
+        </form>
+      </div>
+      <div class="programButtons">
+
+      </div>
+  </div>
+</div>
