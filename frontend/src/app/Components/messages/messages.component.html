@@ -3,20 +3,24 @@
       <div class="titlebar">
         Send Us a Message
       </div>
-      <p>
-        We understand today is a busy one and you might
-      </p>
-      <p>
-        not be able to interact with us or send your wish directly.
-      </p>
-      <p>
-        We wish to hear from you here
-      </p>
+
+      <div class="subtitlesP">
+        <p>
+          We understand today is a busy one and you might
+        </p>
+        <p>
+          not be able to interact with us or send your wish directly.
+        </p>
+        <p>
+          We wish to hear from you here
+        </p>
+      </div>
+
       <div class="MessageBox">
         <div class="messageHeader">
           <p>You are special to us</p>
         </div>
-        <form [formGroup]= "MessageForm" (ngSubmit) = "onSubmit()">
+        <form [formGroup]= "MessageForm">
 
             <div class="inforDiv">
               <div class="nameDiv columnFlex">
@@ -39,8 +43,8 @@
               </div>
             </div>
 
-            <div class="Submitbutton">
-              <button type="submit">Submit</button>
+            <div class="Submitbutton" (click)= "onSubmit()">
+              Submit
             </div>
 
         </form>
