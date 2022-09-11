@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { OurMessagesService } from 'src/app/Services/our-messages.service';
 
 @Component({
   selector: 'app-messages',
@@ -8,21 +9,35 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class MessagesComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private msgService: OurMessagesService) { }
 
   ngOnInit(): void {
   }
 
   ErrorForm:boolean = false;
+  SubmittedForm=false;
 
   MessageForm = this.fb.group({
-    Name : ['', [Validators.required]],
+    name : ['', [Validators.required]],
     Contact : ['', [Validators.required]],
-    Message : '',
+    MessageS : '',
   })
 
   onSubmit(){
-    this.ErrorForm = true
+    if(this.MessageForm.valid){
+      this.ErrorForm = false;
+      this.msgService.sendMessage(this.MessageForm.value)
+                      .subscribe(res=>{
+                        console.log(res);
+                        this.MessageForm.reset();
+                        this.SubmittedForm=true;
+                        setTimeout(() => this.SubmittedForm=false ,1000);
+                        this.ngOnInit()
+                      })
+
+    }else{
+      this.ErrorForm = true
+    }
   }
 
 }

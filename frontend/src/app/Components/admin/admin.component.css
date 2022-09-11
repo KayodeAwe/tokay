@@ -1,0 +1,78 @@
+.pageBackground{
+  background-color: #ECECEC;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contentInfo{
+  max-width: 1035px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.subtitlesP{
+  margin: 8px 0 14px 0;
+  text-align: center;
+}
+.subtitlesP p{
+  font-size: 14px;
+}
+
+.titlebar{
+  font-size: 24px;
+  margin-bottom: 3%;
+  color: #C79D68;
+}
+
+.nameDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+input{
+  padding: 10px;
+  font-size: 16px;
+}
+
+.Submitbutton{
+  margin-top: 20px;
+  background-color: #C79D68;
+  color: white;
+  padding: 4px 12px;
+}
+
+label{
+  margin-bottom: 15px;
+}
+
+@media (max-width: 817px) {
+  .titlebar{
+    font-size: 20px;
+    padding: 2% 0 1% 0;
+  }
+
+}
+@media (max-width: 494px) {
+
+}
+
+@media (max-width: 388px){
+
+}

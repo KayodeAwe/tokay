@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponentComponent } from './Components/navbar-component/navbar-component.component';
 import { MobileNavbarComponent } from './Components/mobile-navbar/mobile-navbar.component';
 import { OtherLinesComponent } from './Components/other-lines/other-lines.component';
+//import { AdminComponent } from './Components/admin/admin.component';
 //mport { GiftModalComponent } from './Components/gift-modal/gift-modal.component';
 //import { ModalModule } from './_modal/modal.module';
 //import { RsvpComponent } from './Components/rsvp/rsvp.component';
@@ -22,6 +24,7 @@ import { OtherLinesComponent } from './Components/other-lines/other-lines.compon
     NavbarComponentComponent,
     MobileNavbarComponent,
     OtherLinesComponent,
+    //AdminComponent,
     //GiftModalComponent,
     //RsvpComponent,
     //GiftsComponent,
@@ -31,6 +34,7 @@ import { OtherLinesComponent } from './Components/other-lines/other-lines.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     //ModalModule
   //  HomepageRoutingModule
    // ReactiveFormsModule

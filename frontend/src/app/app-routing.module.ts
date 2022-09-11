@@ -21,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'gift', loadChildren:() => import('./Pages/gifts/gifts.module').then(mod => mod.GiftsModule)
+  },
+  {
+    path: 'admin', loadChildren:() => import('./Pages/admin/admin.module').then(mod => mod.AdminModule)
   }
 ];
 

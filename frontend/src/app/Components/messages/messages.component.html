@@ -25,7 +25,7 @@
             <div class="inforDiv">
               <div class="nameDiv columnFlex">
                 <label class="underS">Name*</label>
-                <input type="text" formControlName = "Name" placeholder="John" class="LDT" [class.is-invalid] = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched)||ErrorForm">
+                <input type="text" formControlName = "name" placeholder="John" class="LDT" [class.is-invalid] = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched)||ErrorForm">
                 <div *ngIf = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched) || ErrorForm">
                   <small class="error-red" *ngIf = "(MessageForm.get('Name')?.errors) ||ErrorForm" >*Name is required</small>
                 </div>
@@ -37,9 +37,13 @@
                   <small class="error-red" *ngIf = "(MessageForm.get('Contact')?.errors) ||ErrorForm" >*Contact is required</small>
                 </div>
               </div>
+              <div class="ThanksMsg" *ngIf= "SubmittedForm">
+                <h3>We appreciate your love</h3>
+                Message Submitted
+              </div>
               <div class="messageDiv columnFlex">
                 <label class="underS">Message(<span>Optional</span>)*</label>
-                <textarea formControlName = "Message" id="" cols="10" rows="5"></textarea>
+                <textarea formControlName = "MessageS" id="" cols="10" rows="5"></textarea>
               </div>
             </div>
 

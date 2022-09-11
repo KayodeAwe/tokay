@@ -1,0 +1,22 @@
+<div class="pageBackground">
+  <div class="contentInfo">
+      <div class="titlebar">
+        Change youtube Link
+      </div>
+      <div class="fillForm">
+        <form [formGroup]= "youtubeForm">
+          <div class="nameDiv">
+            <label class="underS">Current url*</label>
+            <input type="text" formControlName = "youtubeUrl" placeholder="www.youtube.com" class="LDT" [class.is-invalid] = "(youtubeForm.get('youtubeUrl')?.invalid && youtubeForm.get('youtubeUrl')?.touched)||ErrorForm">
+            <div *ngIf = "(youtubeForm.get('youtubeUrl')?.invalid && youtubeForm.get('youtubeUrl')?.touched) || ErrorForm">
+              <small class="error-red" *ngIf = "(youtubeForm.get('youtubeUrl')?.errors) ||ErrorForm" >*Name is required</small>
+            </div>
+          </div>
+
+          <div class="Submitbutton" (click)= "onSubmit()">
+            Update link
+          </div>
+
+        </form>
+      </div>
+  </div>

@@ -22,21 +22,28 @@
 }
 **/
 
-
 .banner{
   width : 100%;
   height: 100vh;
   position: relative;
   overflow: hidden;
-
+  z-index: -20;
 }
 
-
+.SpaceTop{
+  margin-top: 15px;
+}
+.linktext{
+  margin-top: 5px;
+  color: white;
+  font-weight: 200;
+  cursor: pointer;
+}
 
 .overlay{
   width: 100%;
   height: 100vh;
-  background-color: rgba(53, 29, 38, 0.507);
+  background-color: rgba(53, 29, 38, 0.541);
   position: absolute;
   top: 0;
   z-index: -3;
@@ -109,6 +116,7 @@
   position: absolute;
   margin-top: -50px;
   /* countdown */
+  z-index: 20;
 }
 #hero .hero-container {
   position: absolute;
@@ -146,28 +154,7 @@
   letter-spacing: 2px;
 }
 
-.banner::before{
-  content: '';
-  position: absolute;
-  width: 1px;
-  opacity: 30%;
-  background-color: #ffffff;
-  height: 100vh;
-  top: 0;
-  left: 3%;
-  z-index: 100;
-}
-.banner::after{
-  content: '';
-  position: absolute;
-  width: 1px;
-  opacity: 30%;
-  background-color: #ffffff;
-  height: 100vh;
-  top: 0;
-  right: 3%;
-  z-index: 100;
-}
+
 
 
 .OurNames{
