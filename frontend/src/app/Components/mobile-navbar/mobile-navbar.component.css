@@ -1,0 +1,84 @@
+.mobileNavContainer{
+  background-color: white;
+  padding: 20px 0;
+  z-index: 2000;
+  -webkit-box-shadow: 0 -8px 6px  rgba(71, 71, 71, 28%) ;
+  -moz-box-shadow: 0 -8px 6px  rgba(71, 71, 71, 28%) ;
+       box-shadow: 0 -8px 6px  rgba(71, 71, 71, 28%);
+}
+
+
+.mobileNavContainer ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mobileNavContainer ul li{
+  list-style: none;
+  width: 100%;
+}
+.mobileNavContainer ul li:not(:last-child){
+  border-right: 0.5px solid #351d2617;
+}
+.mobileNavContainer ul li .stackTop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BasicClass path{
+  fill: #351d26;
+}
+
+
+
+.ActiveClassGift path{
+  fill: #DF4407;
+}
+.ActiveClassGift p{
+  color: #DF4407;
+}
+
+.ActiveClassRegister path{
+  fill: #DF4407;
+}
+.ActiveClassRegister p{
+  color: #DF4407;
+}
+
+.ActiveClassProgram path{
+  fill: #DF4407;
+}
+.ActiveClassProgram p{
+  color: #DF4407;
+}
+
+.ActiveClassHome path{
+  fill: #DF4407;
+}
+.ActiveClassHome p{
+  color: #DF4407;
+}
+
+
+svg{
+  width: 100%;
+}
+
+
+.stackTop p{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #351d26;
+}
+
+
+@media (max-width: 430px){
+  svg{
+    width: 60%;
+  }
+
+  .mobileNavContainer{
+    padding: 15px 0;
+  }
+}

@@ -179,3 +179,43 @@
 .OurNames .andA{
   margin: 0 10px;
 }
+
+@media (max-width: 817px) {
+  .scripture{
+    bottom: 65px;
+  }
+
+  .banner::before{
+    left: 2%;
+  }
+  .banner::after{
+    right: 2%;
+  }
+}
+
+@media (max-width: 465px) {
+  .OurNames{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 60% 0;
+  }
+
+  #hero h1 {
+    font-size: 48px;
+    font-weight:600;
+    line-height: 46px;
+    padding: 0;
+    /**text-transform: uppercase;**/
+    color: #ffffff;
+  }
+  #hero p{
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+@media (max-width: 388px){
+
+}

@@ -7,7 +7,10 @@
 
 .contentInfo{
   max-width: 1035px;
-   padding-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +21,15 @@
 
 .titlebar{
   font-size: 24px;
-  padding: 4.8% 0 3% 0;
+  margin-top: 5%;
+  margin-bottom: 2%;
   color: #C79D68;
 }
 
 .programButtons{
-  padding-top: 4%
+  padding-top: 4%;
+  display: flex;
+  flex-direction: row;
 }
 .programButtons a{
   text-decoration: none;
@@ -45,9 +51,70 @@
   border-radius: 0 4px 4px 0;
 }
 
+.programImage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.programImage img{
+  width: 100%;
+  transform: translateX(0);
+  overflow: hidden;
+}
+
 .programImage a{
   transition: transform 1s ease-in;
 }
 .programImage a :hover{
   transform: scale(1.008);
+}
+
+@media (max-width: 817px) {
+  .programImage{
+    width: 80%;
+  }
+  .contentInfo{
+    padding-bottom: 3%;
+  }
+
+  .titlebar{
+    font-size: 20px;
+    margin-top: -2%;
+  }
+}
+@media (max-width: 530px) {
+  .programImage img{
+    width: 150%;
+    transform: translateX(-55%);
+
+  }
+
+  .programImage{
+    transform: translateX(15%);
+  }
+  .programButtons{
+    display: flex;
+    flex-direction: column;
+  }
+  .contentInfo{
+    padding-bottom: 3%;
+  }
+
+  .programButtons .OpenBtn{
+    border-radius: 0;
+  }
+  .programButtons .CloseBtn{
+    border-radius: 0;
+  }
+}
+@media (max-width: 388px){
+  .programImage img{
+    width: 150%;
+  }
+  .programImage{
+    transform: translateX(15%);
+  }
 }

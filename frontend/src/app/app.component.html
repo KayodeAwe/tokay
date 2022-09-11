@@ -1,4 +1,13 @@
 
-<app-navbar-component></app-navbar-component>
+<app-navbar-component (TopNavSwitchHome)= "onTopNavSwitchHome()"
+                      (TopNavSwitchRsvp)= "onTopNavSwitchRsvp()">
+
+</app-navbar-component>
 <router-outlet></router-outlet>
 <app-other-lines></app-other-lines>
+<app-mobile-navbar class="mobile_nav" (SwitchHome) = "onSwitchHome()"
+                                      (SwitchProgram)= "onSwitchProgram()"
+                                      (SwitchMessage)= "onSwitchMessage()"
+                                      (SwitchGift)= "onSwitchGift()"  >
+
+</app-mobile-navbar>

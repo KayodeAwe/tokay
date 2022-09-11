@@ -2,16 +2,35 @@
    <div class="container">
      <ul>
        <!--<li><a href="#" class="current">Home</a></li>-->
-       <li><a routerLink="home">Home</a></li>
-       <li><a routerLink="program">Program</a></li>
-       <li><a routerLink="register">Register</a></li>
-       <li><a routerLink="gift">Gifts</a></li>
+       <li  (click)= "directHome()" (mouseleave)="RemoveUnderline()" (mouseover)="moverUnderline()" [ngClass]="Switchdata ? 'ChooseIt' : 'DefaultIt'"><div class="ahome centralizeDiv">
+                                                <p>Home</p>
+                                                <div class="lineB"></div>
+                                    </div>
+       </li>
+       <li (click)= "directProgram()" (mouseleave)="RemoveUnderlineProgram()" (mouseover)="moverUnderlineProgram()" [ngClass]="SwitchdataProgram ? 'ChooseItProgram' : 'DefaultItProgram'"><div  class="bProgram centralizeDiv">
+                                                 <p>Program</p>
+                                                 <div class="lineB"></div>
+                                      </div>
+      </li>
+
+      <li (click)= "directMessage()" (mouseleave)="RemoveUnderlineRegister()" (mouseover)="moverUnderlineRegister()" [ngClass]="SwitchdataRegister ? 'ChooseItRegister' : 'DefaultIt'"><div class="cdirectM centralizeDiv">
+                                                  <p>Register</p>
+                                                  <div class="lineB"></div>
+                                     </div>
+      </li>
+      <li (click)= "directGifts()" (mouseleave)="RemoveUnderlineGifts()" (mouseover)="moverUnderlineGifts()" [ngClass]="SwitchdataGifts ? 'ChooseItGifts' : 'DefaultItGifts'"><div class="dDirectG centralizeDiv">
+                                                  <p>Gifts</p>
+                                                  <div class="lineB"></div>
+                                    </div>
+      </li>
      </ul>
      <div class="otherNavHalf">
-      <p>Tokay'22</p>
-      <div class="rsvp">
-         RSVP
+      <p (click)= "directHome()">Tokay'22</p>
+
+      <div class="rsvp" (click)="moveToRsvp()" [ngClass]="data ? 'ActiveClass' : 'BasicClass'">
+          RSVP
       </div>
+
      </div>
    </div>
  </nav>

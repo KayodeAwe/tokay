@@ -1,0 +1,265 @@
+.pageBackground{
+  background-color: #ECECEC;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contentInfo{
+  max-width: 1035px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.subtitlesP{
+  margin: 8px 0 14px 0;
+  text-align: center;
+}
+.subtitlesP p{
+  font-size: 14px;
+}
+
+.titlebar{
+  font-size: 24px;
+  margin-bottom: 3%;
+  color: #C79D68;
+}
+
+.programButtons{
+  padding-top: 4%
+}
+.programButtons a{
+  text-decoration: none;
+}
+
+
+.programImage a{
+  transition: transform 1s ease-in;
+}
+
+.contentInfo p{
+  color: rgb(87, 87, 87);
+}
+
+.messageHeader{
+  position: absolute;
+  top: -20px;
+  left: 12px;
+  background-color: #3F281D;
+  padding: 10px 20px;
+  border-radius: 2px;
+  color: white;
+}
+
+.messageHeader p{
+  color: white;
+}
+
+
+
+.MessageBox{
+  margin-top: 3%;
+  background-color: #FFFBF6;
+  position: relative;
+  padding: 20px 0;
+  border: 0.5px solid #00A400;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 5px 6px  rgba(71, 71, 71, 28%) ;
+  -moz-box-shadow: 0 10px 6px  rgba(71, 71, 71, 28%) ;
+       box-shadow: 0 10px 6px  rgba(71, 71, 71, 28%);
+}
+
+.messageHeader{
+  position: absolute;
+  top: -20px;
+  left: 12px;
+  background-color: #3F281D;
+  padding: 6px 20px;
+  border-radius: 2px;
+  color: white;
+}
+
+.messageHeader p{
+  color: white;
+}
+
+.sideflx{
+  display: flex;
+  align-items: center;
+}
+
+.accountName h3{
+  margin-left: 100px;
+}
+
+.whiteh3{
+  color: rgb(0, 0, 0);
+}
+
+.whiteh3 h3{
+  display: flex;
+  justify-content: center;
+}
+
+.accountName{
+  margin: 25px -2px;
+  padding: 10px 46px;
+
+}
+.accountName p{
+  color: black;
+  font-size: 14px;
+}
+
+.colorChangeGold{
+  background-color: #ffffff;
+}
+
+.colorChangeGoldborder{
+  background-color: white;
+}
+
+.bank{
+  border: 1px solid #00A400;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 10px;
+  width: 350px;
+  transform: translateX(5px);
+}
+
+.bankTitle{
+  border: 1px solid #00A400;
+  padding: 6px 5px;
+  border-radius: 4px;
+  background-color: #FFFBF6;
+  margin-left: -10px;
+  transform: translateX(-15px);
+}
+
+.bankLogo img{
+  width: 50px;
+  transform: translateX(-100%);
+}
+
+
+.bankHouseHolder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.bankTitle h3{
+  color: #00A400;
+}
+.bankTitle span{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.wTitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 40px 0;
+}
+
+.wTitle p{
+  color: #C79D68;
+}
+
+.colorChangeGold{
+  margin-top: 40px;
+}
+
+.bankTitle a{
+  text-decoration: none;
+  list-style: none;
+}
+
+
+@media (max-width: 817px) {
+
+  .titlebar{
+    font-size: 20px;
+    padding: 2% 0 1% 0;
+  }
+  .subtitlesP{
+    font-size: 16px;
+    margin-bottom: 2%;
+  }
+  .subtitlesP p{
+    font-size: 16px;
+  }
+  .MessageBox{
+    margin-top: 6%;
+    padding: 10px 0px;
+  }
+  .accountName h3{
+    margin-left: 80px;
+  }
+
+
+
+}
+@media (max-width: 513px) {
+  .subtitlesP p{
+    font-size: 14px;
+  }
+
+  .bank{
+    width: 300px;
+    transform: translateX(5px);
+  }
+
+  .bankTitle{
+    margin-left: -10px;
+    transform: translateX(-15px);
+  }
+
+  .bankLogo img{
+    transform: translateX(-40%);
+  }
+}
+@media (max-width: 430px){
+  .accountName{
+    padding: 10px 20px;
+  }
+  .accountName h3{
+    font-size: 18px;
+  }
+  .subtitlesP p{
+    font-size: 12px;
+  }
+
+  .bank{
+    width: 250px;
+    transform: translateX(2px);
+  }
+
+  .bankTitle{
+    margin-left: -10px;
+    transform: translateX(-5px);
+  }
+  .bankLogo img{
+    transform: translateX(0%);
+  }
+  .bankTitle h3{
+    font-size: 14px;
+  }
+  .bankTitle span{
+    font-size: 12px;
+    font-weight: 300;
+  }
+}

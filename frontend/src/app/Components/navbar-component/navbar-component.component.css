@@ -28,11 +28,12 @@ body {
    justify-content: flex-start;
  }
 
- .nav a {
+ .nav li {
    color: #fff;
    text-decoration: none;
    margin-right: 16px;
-   transition: all 0.3s ease-in-out;
+   cursor: pointer;
+   font-size: 18px;
  }
 
 
@@ -48,20 +49,120 @@ body {
    display: flex;
    justify-content: space-between;
    width: 50%;
+   align-items: center;
  }
 
  .otherNavHalf p{
   transform: translateX(-50%);
+  cursor: pointer;
  }
 
  .rsvp{
    font-size: 16px;
    font-weight: 600;
    color: #351d26;
-   background-color: white;
    border-radius: 2px;
    display: flex;
    align-items: center;
    justify-content: center;
    padding: 8px 24px;
+   cursor: pointer;
  }
+
+.BasicClass{
+  background-color: #fff;
+  color: #707070;
+}
+
+.ActiveClass{
+  background-color: #DF4407;
+  color: #fff;
+}
+
+.lineB{
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 4px;
+}
+
+.centralizeDiv{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ahome .lineB{
+  transform: translateX(-101%);
+  transition: all 0.6s ease-in-out;
+}
+.ChooseIt .ahome .lineB{
+  transform: translateX(0%);
+}
+
+.bProgram .lineB{
+  transform: translateX(-101%);
+  transition: all 0.6s ease-in-out;
+}
+.ChooseItProgram .bProgram .lineB{
+  transform: translateX(0%);
+}
+
+.cdirectM .lineB{
+  transform: translateX(-101%);
+  transition: all 0.6s ease-in-out;
+}
+.ChooseItRegister .cdirectM .lineB{
+  transform: translateX(0%);
+}
+
+.dDirectG .lineB{
+  transform: translateX(-101%);
+  transition: all 0.6s ease-in-out;
+}
+.ChooseItGifts .dDirectG .lineB{
+  transform: translateX(0%);
+}
+
+@media (max-width: 817px) {
+  .nav ul {
+    display: none;
+    list-style-type: none;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .otherNavHalf{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .otherNavHalf p{
+   transform: translateX(0);
+   font-size: 16px;
+  }
+
+  .rsvp{
+    padding: 4px 18px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .container{
+    padding: 1.6% 3.8%;
+  }
+}
+
+@media (max-width: 565px) {
+
+  .rsvp{
+    padding: 4px 12px;
+  }
+
+}
+@media (max-width: 388px){
+  .container{
+    padding: 2% 3.8%;
+  }
+}
