@@ -3,7 +3,9 @@ const bodyParser = require('body-parser');
 const cors = require('cors')
 const path = require('path');
 
-const PORT = 3000;
+//Heroku
+//const PORT = 3000
+const PORT =  process.env.PORT || 8080;
 const api = require('./routes/api')
 const app = express()
 
