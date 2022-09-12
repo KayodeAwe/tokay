@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators';
 })
 export class YoutubeLService {
 
-  private _SingleUrl = "http://localhost:3000/api/newLink/";
+  private _SingleUrl = "api/newLink/";
 
   constructor(private http:HttpClient) { }
 

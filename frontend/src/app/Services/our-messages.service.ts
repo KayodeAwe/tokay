@@ -8,8 +8,8 @@ import { catchError } from 'rxjs/operators';
 })
 export class OurMessagesService {
 
-  private _getmsgUrl = "http://localhost:3000/api/getMessages";
-  private _posttmsgUrl = "http://localhost:3000/api/sendMsg";
+  private _getmsgUrl = "api/getMessages";
+  private _posttmsgUrl = "api/sendMsg";
 
   constructor(private http:HttpClient) { }
 

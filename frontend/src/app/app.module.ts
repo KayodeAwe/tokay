@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponentComponent } from './Components/navbar-component/navbar-component.component';
 import { MobileNavbarComponent } from './Components/mobile-navbar/mobile-navbar.component';
 import { OtherLinesComponent } from './Components/other-lines/other-lines.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 //import { AdminComponent } from './Components/admin/admin.component';
 //mport { GiftModalComponent } from './Components/gift-modal/gift-modal.component';
 //import { ModalModule } from './_modal/modal.module';
@@ -24,6 +25,7 @@ import { OtherLinesComponent } from './Components/other-lines/other-lines.compon
     NavbarComponentComponent,
     MobileNavbarComponent,
     OtherLinesComponent,
+    PageNotFoundComponent,
     //AdminComponent,
     //GiftModalComponent,
     //RsvpComponent,
