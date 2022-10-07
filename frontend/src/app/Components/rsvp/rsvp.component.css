@@ -110,8 +110,8 @@
 }
 
 .accountName{
-  margin: 25px -2px;
-  padding: 10px 46px;
+  margin: 10px -2px;
+  padding: 5px 46px;
 
 }
 .accountName p{
@@ -218,6 +218,10 @@
     font-size: 14px;
   }
 
+  .subtitlesP{
+    margin-bottom: 10px;
+  }
+
   .bank{
     width: 300px;
     transform: translateX(5px);
@@ -231,10 +235,18 @@
   .bankLogo img{
     transform: translateX(-40%);
   }
+  .wTitle{
+    margin: 30px 0 20px 0;
+  }  
+  
+  .titlebar{
+    padding: 0 0 10px 0;
+  }
+
 }
 @media (max-width: 430px){
   .accountName{
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
   .accountName h3{
     font-size: 18px;
@@ -261,5 +273,8 @@
   .bankTitle span{
     font-size: 12px;
     font-weight: 300;
+  }
+  .titlebar{
+    padding: 0 0 4px 0;
   }
 }

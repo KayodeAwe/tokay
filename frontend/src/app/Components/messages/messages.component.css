@@ -55,9 +55,14 @@
 }
 
 
+.maxWidthP{
+  max-width: 380px;
+  text-align: center;
+}
+
 
 .subtitlesP{
-  margin: 8px 0;
+  margin: 2% 0;
   text-align: center;
 }
 
@@ -107,7 +112,7 @@ form{
 }
 
 .MessageBox{
-  margin-top: 3%;
+  margin-top: 2%;
   background-color: #FFFBF6;
   position: relative;
   padding: 20px 30px;
@@ -182,17 +187,18 @@ label span{
 @media (max-width: 817px) {
   .titlebar{
     font-size: 20px;
-    padding: 2% 0 1% 0;
+    padding: 2% 0 0px 0;
   }
   .subtitlesP{
-    font-size: 14px;
-    margin-bottom: 2%;
+    margin-bottom: 15px;
   }
-  .subtitlesP p{
-    font-size: 12px;
+  .maxWidthP{
+    max-width: 340px;
+    text-align: center;
+    font-size: 14px;
   }
   .MessageBox{
-    margin-top: 10%;
+    margin-top: 1%;
     padding: 10px 20px;;
   }
 }
@@ -208,5 +214,7 @@ label span{
   }
 }
 @media (max-width: 388px){
-
+  .MessageBox{
+    margin-top: 3%;
+  }
 }

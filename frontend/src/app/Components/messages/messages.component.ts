@@ -31,7 +31,7 @@ export class MessagesComponent implements OnInit {
                         console.log(res);
                         this.MessageForm.reset();
                         this.SubmittedForm=true;
-                        setTimeout(() => this.SubmittedForm=false ,1000);
+                        setTimeout(() => this.SubmittedForm=false ,2000);
                         this.ngOnInit()
                       })
 

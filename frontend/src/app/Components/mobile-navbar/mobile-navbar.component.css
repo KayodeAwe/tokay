@@ -75,10 +75,15 @@ svg{
 
 @media (max-width: 430px){
   svg{
-    width: 60%;
+    width: 25%;
   }
 
   .mobileNavContainer{
-    padding: 15px 0;
+    padding: 5px 0;
+  }
+
+  .stackTop p{
+    margin-top: 5px;
+    font-size: 10px;
   }
 }

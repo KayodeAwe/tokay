@@ -27,7 +27,7 @@ export class MobileNavbarComponent implements OnInit {
   }
 
   directHome(){
-    this.route.navigate(['/home'])
+    this.route.navigate([''])
     this.dataGift = false;
     this.dataRegister = false;
     this.dataProgram = false;

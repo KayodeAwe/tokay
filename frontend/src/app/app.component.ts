@@ -20,7 +20,7 @@ export class AppComponent implements AfterViewInit{
         if (event instanceof NavigationEnd) {
             this.currentRoute = event.url;
               //console.log(this.currentRoute);
-              if(this.currentRoute == "/home"){
+              if(this.currentRoute == ""){
                 this.onTopNavSwitchHome()
               }else if(this.currentRoute == "/program"){
                 this.onRefreshProgram()

@@ -3,13 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  
   {
-    path : '',
-    redirectTo: '/home',
-    pathMatch : 'full'
-  },
-  {
-    path:'home', loadChildren : () => import('./Pages/homepage/homepage.module').then(mod => mod.HomepageModule)
+    path:'', loadChildren : () => import('./Pages/homepage/homepage.module').then(mod => mod.HomepageModule)
   },
   {
     path: 'program', loadChildren:() => import('./Pages/program/program.module').then(mod => mod.ProgramModule)

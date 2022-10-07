@@ -25,4 +25,6 @@ export class HeroComponent implements OnInit {
     window.open(this.linkToLiveBroadcast, "_blank");
   }
 
+  
+
 }

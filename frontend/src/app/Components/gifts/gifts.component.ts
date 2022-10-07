@@ -10,9 +10,11 @@ export class GiftsComponent implements OnInit {
 
   constructor() { }
 
-  CopiedNumber=false;
+  CopiedNumber = false;
+  CopiedTobiNumber = false;
 
   kayAccountNumber:string = '0215682650'
+  TobiAccountNumber:string = '0696642993'
 
   ngOnInit(): void {
   }
@@ -21,6 +23,12 @@ export class GiftsComponent implements OnInit {
     navigator.clipboard.writeText(this.kayAccountNumber);
     this.CopiedNumber=true;
     setTimeout(() => this.CopiedNumber=false ,1000);
+  }
+
+  copyTobiAccountNumber() {
+    navigator.clipboard.writeText(this.TobiAccountNumber);
+    this.CopiedTobiNumber = true;
+    setTimeout(() => this.CopiedTobiNumber=false ,1000);
   }
 
 }

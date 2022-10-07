@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.nav {
+nav{
    position: fixed;
    background-color: rgba(53, 29, 38, 0.911);
    top: 0;
@@ -21,14 +21,16 @@ body {
    z-index: 5;
  }
 
- .nav ul {
+
+
+ nav ul {
    display: flex;
    list-style-type: none;
    align-items: center;
    justify-content: flex-start;
  }
 
- .nav li {
+ nav li {
    color: #fff;
    text-decoration: none;
    margin-right: 16px;

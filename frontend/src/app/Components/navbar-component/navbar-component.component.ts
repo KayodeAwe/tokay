@@ -66,7 +66,7 @@ export class NavbarComponentComponent implements OnInit {
   }
 
   directHome(){
-    this.route.navigate(['/home'])
+    this.route.navigate([''])
     this.data = false;
     this.TopNavSwitchHome.emit()
   }

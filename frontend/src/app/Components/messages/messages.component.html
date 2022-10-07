@@ -5,14 +5,8 @@
       </div>
 
       <div class="subtitlesP">
-        <p>
-          We understand today is a busy one and you might
-        </p>
-        <p>
-          not be able to interact with us or send your wish directly.
-        </p>
-        <p>
-          We wish to hear from you here
+        <p class="maxWidthP">
+          We know you’d love to join us physically but we also understand that circumstances may not permit. Still, we would love to receive your prayers and warm wishes.
         </p>
       </div>
 
@@ -25,9 +19,9 @@
             <div class="inforDiv">
               <div class="nameDiv columnFlex">
                 <label class="underS">Name*</label>
-                <input type="text" formControlName = "name" placeholder="John" class="LDT" [class.is-invalid] = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched)||ErrorForm">
-                <div *ngIf = "(MessageForm.get('Name')?.invalid && MessageForm.get('Name')?.touched) || ErrorForm">
-                  <small class="error-red" *ngIf = "(MessageForm.get('Name')?.errors) ||ErrorForm" >*Name is required</small>
+                <input type="text" formControlName = "name" placeholder="John" class="LDT" [class.is-invalid] = "(MessageForm.get('name')?.invalid && MessageForm.get('name')?.touched)||ErrorForm">
+                <div *ngIf = "(MessageForm.get('name')?.invalid && MessageForm.get('name')?.touched) || ErrorForm">
+                  <small class="error-red" *ngIf = "(MessageForm.get('name')?.errors) ||ErrorForm" >*Name is required</small>
                 </div>
               </div>
               <div class="contactDiv columnFlex">
@@ -37,7 +31,7 @@
                   <small class="error-red" *ngIf = "(MessageForm.get('Contact')?.errors) ||ErrorForm" >*Contact is required</small>
                 </div>
               </div>
-              <div class="ThanksMsg" *ngIf= "SubmittedForm">
+              <div class="ThanksMsg" *ngIf= "SubmittedForm" [ngClass]="SubmittedForm? 'activeCongrats': 'Normall'">
                 <h3>We appreciate your love</h3>
                 Message Submitted
               </div>
