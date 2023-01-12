@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   ) {
       this.titleService.setTitle('Home');
       this.meta.addTag({ name: 'description', content: 'We are so glad to welcome you to the wedding of Tobiloba&Kayode, We strongly appreciate your presence here'});
-      this.meta.addTag({ name: 'keywords', content: 'Tokay, Kayode, Tobi, Awe, Fabunmi, wedding'})
+      this.meta.addTag({ name: 'keywords', content: 'Tokay, Kayode, Tobi, Awe, Fabunmi, wedding, tokaywed, tokaywed.com, www.tokaywed.com'})
    }
 
   timer1: any;
