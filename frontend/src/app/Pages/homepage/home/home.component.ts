@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private titleService: Title,
+    private meta: Meta
+  ) {
+      this.titleService.setTitle('Home');
+      this.meta.addTag({ name: 'description', content: 'We are so glad to welcome you to the wedding of Tobiloba&Kayode, We strongly appreciate your presence here'});
+      this.meta.addTag({ name: 'keywords', content: 'Tokay, Kayode, Tobi, Awe, Fabunmi, wedding'})
+   }
 
   timer1: any;
   slider:number = 0;
@@ -24,15 +32,15 @@ export class HomeComponent implements OnInit {
     if (this.audio_url) {
       clearInterval(this.timer1);
       this.reset_slider();
-  
+
       this.track.src = this.audio_url;
       this.track.load();
       this.track.volume = 0.5;
       this.playsong();
-  
+
       this.timer1 = setInterval(() => {
       }, 1000);
-  
+
     }
   }
 

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  
+
   {
     path:'', loadChildren : () => import('./Pages/homepage/homepage.module').then(mod => mod.HomepageModule)
   },
@@ -30,7 +30,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: NoPreloading})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
