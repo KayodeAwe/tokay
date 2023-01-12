@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors')
 const path = require('path');
 const http = require('http');
-//var enforce = require('express-sslify')
+var enforce = require('express-sslify')
 
 //Heroku
 //const PORT = 3000
@@ -14,7 +14,7 @@ const app = express()
 // Use enforce.HTTPS({ trustProtoHeader: true }) in case you are behind
 // a load balancer (e.g. Heroku). See further comments below
 
-//app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 
 app.use(express.static(path.join(__dirname,'dist')))
