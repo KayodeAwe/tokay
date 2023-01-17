@@ -22,6 +22,9 @@ const routes: Routes = [
   {
     path: 'admin', loadChildren:() => import('./Pages/admin/admin.module').then(mod => mod.AdminModule)
   },
+  {
+    path: 'home', redirectTo: '/', pathMatch: 'full'
+  },
   /**
   {
     path:"**", component:PageNotFoundComponent
