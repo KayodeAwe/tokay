@@ -31,7 +31,7 @@
                   <small class="error-red" *ngIf = "(MessageForm.get('Contact')?.errors) ||ErrorForm" >*Contact is required</small>
                 </div>
               </div>
-              <div class="ThanksMsg" *ngIf= "SubmittedForm" [ngClass]="SubmittedForm? 'activeCongrats': 'Normall'">
+              <div class="ThanksMsg" *ngIf= "SubmittedForm">
                 <h3>We appreciate your love</h3>
                 Message Submitted
               </div>
