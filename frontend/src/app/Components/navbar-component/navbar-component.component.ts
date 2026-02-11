@@ -5,21 +5,24 @@ import { Router } from '@angular/router';
   selector: 'app-navbar-component',
   templateUrl: './navbar-component.component.html',
   styleUrls: ['./navbar-component.component.css'],
-  outputs : ['TopNavSwitchHome', 'TopNavSwitchProgram', 'TopNavSwitchMessage', 'TopNavSwitchGift', 'TopNavSwitchRsvp']
+  outputs: [
+    'TopNavSwitchHome',
+    'TopNavSwitchProgram',
+    'TopNavSwitchMessage',
+    'TopNavSwitchGift',
+    'TopNavSwitchRsvp',
+  ],
 })
 export class NavbarComponentComponent implements OnInit {
+  constructor(private route: Router) {}
 
-  constructor(private route: Router) { }
+  data = false;
+  Switchdata = false;
+  SwitchdataProgram = false;
+  SwitchdataRegister = false;
+  SwitchdataGifts = false;
 
-   data = false;
-   Switchdata = false;
-   SwitchdataProgram = false;
-   SwitchdataRegister = false;
-   SwitchdataGifts = false;
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 
   public TopNavSwitchHome = new EventEmitter();
   public TopNavSwitchProgram = new EventEmitter();
@@ -27,65 +30,63 @@ export class NavbarComponentComponent implements OnInit {
   public TopNavSwitchGift = new EventEmitter();
   public TopNavSwitchRsvp = new EventEmitter();
 
-  moverUnderline(){
+  moverUnderline() {
     this.Switchdata = true;
   }
-  RemoveUnderline(){
+  RemoveUnderline() {
     this.Switchdata = false;
   }
 
-  moverUnderlineProgram(){
-    this.SwitchdataProgram =true;
+  moverUnderlineProgram() {
+    this.SwitchdataProgram = true;
   }
-  RemoveUnderlineProgram(){
-    this.SwitchdataProgram =false;
+  RemoveUnderlineProgram() {
+    this.SwitchdataProgram = false;
   }
 
-  moverUnderlineRegister(){
+  moverUnderlineRegister() {
     this.SwitchdataRegister = true;
   }
-  RemoveUnderlineRegister(){
+  RemoveUnderlineRegister() {
     this.SwitchdataRegister = false;
   }
 
-  moverUnderlineGifts(){
+  moverUnderlineGifts() {
     this.SwitchdataGifts = true;
   }
-  RemoveUnderlineGifts(){
+  RemoveUnderlineGifts() {
     this.SwitchdataGifts = false;
   }
 
-
-  moveToRsvp(){
-    this.route.navigate(['/rsvp'])
+  moveToRsvp() {
+    this.route.navigate(['/rsvp']);
     this.data = true;
-    this.TopNavSwitchRsvp.emit()
+    this.TopNavSwitchRsvp.emit();
   }
-  SwitchRsvp(){
+  SwitchRsvp() {
     this.data = true;
   }
 
-  directHome(){
-    this.route.navigate([''])
+  directHome() {
+    this.route.navigate(['']);
     this.data = false;
-    this.TopNavSwitchHome.emit()
+    this.TopNavSwitchHome.emit();
   }
 
-  directProgram(){
-    this.route.navigate(['/program'])
+  directProgram() {
+    this.route.navigate(['/program']);
     this.data = false;
-    this.TopNavSwitchProgram.emit()
+    this.TopNavSwitchProgram.emit();
   }
-  directMessage(){
-    this.route.navigate(['/register'])
+  directMessage() {
+    this.route.navigate(['/location']);
     this.data = false;
     this.TopNavSwitchMessage.emit();
   }
-  directGifts(){
-    this.route.navigate(['/gift'])
+  directGifts() {
+    this.route.navigate(['/gift']);
     this.data = false;
 
-    this.TopNavSwitchGift.emit()
+    this.TopNavSwitchGift.emit();
   }
-
 }

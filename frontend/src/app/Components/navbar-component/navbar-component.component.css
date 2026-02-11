@@ -11,7 +11,7 @@ body {
 
 nav{
    position: fixed;
-   background-color: rgba(53, 29, 38, 0.911);
+   background-color: #0e3351;
    top: 0;
    left: 0;
    right: 0;
@@ -44,7 +44,7 @@ nav{
  .container{
    display: flex;
    justify-content: space-between;
-   padding: 1.2% 3.8%;
+   padding: 0.7% 3.8%;
    align-items: center;
  }
  .otherNavHalf{
@@ -77,7 +77,7 @@ nav{
 }
 
 .ActiveClass{
-  background-color: #DF4407;
+  background-color: #89D1E5;
   color: #fff;
 }
 
@@ -152,7 +152,7 @@ nav{
     font-weight: 600;
   }
   .container{
-    padding: 1.6% 3.8%;
+    padding: 2% 3.8%;
   }
 }
 

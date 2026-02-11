@@ -1,34 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-gifts',
   templateUrl: './gifts.component.html',
-  styleUrls: ['./gifts.component.css']
+  styleUrls: ['./gifts.component.css'],
 })
 export class GiftsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  copied = false;
 
-  CopiedNumber = false;
-  CopiedTobiNumber = false;
+  accountNumber: string = '0250630231';
+  accountName: string = 'Eunice Akinware';
+  description: string = 'Gifts/Family Support';
 
-  kayAccountNumber:string = '0215682650'
-  TobiAccountNumber:string = '0696642993'
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  copyAccountNumber() {
+    navigator.clipboard.writeText(this.accountNumber);
+    this.copied = true;
+    setTimeout(() => (this.copied = false), 2000);
   }
-
-  copyTheAccountNumber(){
-    navigator.clipboard.writeText(this.kayAccountNumber);
-    this.CopiedNumber=true;
-    setTimeout(() => this.CopiedNumber=false ,1000);
-  }
-
-  copyTobiAccountNumber() {
-    navigator.clipboard.writeText(this.TobiAccountNumber);
-    this.CopiedTobiNumber = true;
-    setTimeout(() => this.CopiedTobiNumber=false ,1000);
-  }
-
 }

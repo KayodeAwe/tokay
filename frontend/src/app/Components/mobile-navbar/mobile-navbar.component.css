@@ -1,5 +1,5 @@
 .mobileNavContainer{
-  background-color: white;
+  background-color: #0e3351;
   padding: 20px 0;
   z-index: 2000;
   -webkit-box-shadow: 0 -8px 6px  rgba(71, 71, 71, 28%) ;
@@ -27,37 +27,37 @@
 }
 
 .BasicClass path{
-  fill: #351d26;
+  fill: #ffffff;
 }
 
 
 
 .ActiveClassGift path{
-  fill: #DF4407;
+  fill: #89D1E5;
 }
 .ActiveClassGift p{
-  color: #DF4407;
+  color: #89D1E5;
 }
 
 .ActiveClassRegister path{
-  fill: #DF4407;
+  fill: #89D1E5;
 }
 .ActiveClassRegister p{
-  color: #DF4407;
+  color: #89D1E5;
 }
 
 .ActiveClassProgram path{
-  fill: #DF4407;
+  fill: #89D1E5;
 }
 .ActiveClassProgram p{
-  color: #DF4407;
+  color: #89D1E5;
 }
 
 .ActiveClassHome path{
-  fill: #DF4407;
+  fill: #89D1E5;
 }
 .ActiveClassHome p{
-  color: #DF4407;
+  color: #89D1E5;
 }
 
 
@@ -79,7 +79,7 @@ svg{
   }
 
   .mobileNavContainer{
-    padding: 5px 0;
+    padding: 8px 0;
   }
 
   .stackTop p{

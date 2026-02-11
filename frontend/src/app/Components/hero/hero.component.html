@@ -1,30 +1,62 @@
-<header (click)= "gotoLink()">
-  <div class="banner" >
-      <div class="slider">
+<header>
+  <div class="banner">
+      <!-- Image slider with preloading -->
+      <div class="slider-container">
+        <div
+          *ngFor="let image of bannerImages; let i = index"
+          class="slide"
+          [class.active]="i === currentImageIndex"
+          [style.backgroundImage]="'url(' + image + ')'"
+        ></div>
       </div>
       <div class="overlay">
               <section id="hero">
                   <div class="hero-container">
                       <div class="top_Details">
-                        <p>We're Married</p>
+                        <p>We're Getting Married</p>
                         <div class="OurNames">
                           <div class="tobi">
-                            <h1>Tobiloba</h1>
+                            <h1>Jolayemi</h1>
                           </div>
                           <div class="andA">
                             <h1>& </h1>
                           </div>
                           <div class="kayode">
-                            <h1>Kayode</h1>
+                            <h1>Timileyin</h1>
                           </div>
                         </div>
-                        <p >17. 09. 2022</p>
+                        <p >14. 02. 2026</p>
                       </div>
-                      <div class="SpaceTop" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35.987" height="25.151" viewBox="0 0 35.987 25.151">
-                          <path id="Icon_simple-youtube" data-name="Icon simple-youtube" d="M35.243,9.307a4.51,4.51,0,0,0-3.132-3.132c-2.805-.752-14.094-.752-14.094-.752s-11.26-.015-14.094.752A4.51,4.51,0,0,0,.791,9.307a46.871,46.871,0,0,0-.783,8.708A46.87,46.87,0,0,0,.791,26.69a4.511,4.511,0,0,0,3.132,3.132c2.8.753,14.094.753,14.094.753s11.259,0,14.094-.753a4.511,4.511,0,0,0,3.132-3.132,46.871,46.871,0,0,0,.75-8.674,46.87,46.87,0,0,0-.75-8.707ZM14.413,23.4V12.612l9.4,5.4Z" transform="translate(-0.007 -5.424)" fill="red"/>
+                      <div class="SpaceTop" (click)="gotoLink()">
+                        <!-- Google Meet Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48">
+                          <path fill="#4285f4" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"/>
+                          <path fill="#fff" d="M33.5,22.3V17c0-1.1-0.9-2-2-2H16.5c-1.1,0-2,0.9-2,2v14c0,1.1,0.9,2,2,2h15c1.1,0,2-0.9,2-2v-5.3l4.5,4.5V17.8L33.5,22.3z"/>
                         </svg>
-                        <div class="linktext">watch on youtube</div>
+                        <div class="linktext">Join on Google Meet</div>
+
+                        <!-- Countdown Timer -->
+                        <div class="countdown-container">
+                          <div class="countdown-item">
+                            <span class="countdown-value">{{ days }}</span>
+                            <span class="countdown-label">Days</span>
+                          </div>
+                          <div class="countdown-separator">:</div>
+                          <div class="countdown-item">
+                            <span class="countdown-value">{{ hours }}</span>
+                            <span class="countdown-label">Hours</span>
+                          </div>
+                          <div class="countdown-separator">:</div>
+                          <div class="countdown-item">
+                            <span class="countdown-value">{{ minutes }}</span>
+                            <span class="countdown-label">Mins</span>
+                          </div>
+                          <div class="countdown-separator">:</div>
+                          <div class="countdown-item">
+                            <span class="countdown-value">{{ seconds }}</span>
+                            <span class="countdown-label">Secs</span>
+                          </div>
+                        </div>
                       </div>
                       <div class="scripture">
                         <p>1 Corinthians 13:4-7</p>
@@ -37,3 +69,9 @@
 
 
 </header><!-- End #header -->
+
+<!-- Snackbar -->
+<div class="snackbar" [class.show]="showSnackbar">
+  <span class="snackbar-message">{{ snackbarMessage }}</span>
+  <button class="snackbar-close" (click)="closeSnackbar()">×</button>
+</div>

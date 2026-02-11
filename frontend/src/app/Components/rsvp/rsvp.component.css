@@ -1,280 +1,408 @@
-.pageBackground{
+.pageBackground {
   background-color: #ECECEC;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
-.contentInfo{
+.contentInfo {
   max-width: 1035px;
+  min-height: 100vh;
+  height: calc(100vh);
+  height: calc(100dvh);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
   background-color: white;
   margin: 0 auto;
-  height: 100vh;
+  padding: 20px;
+  padding-top: 90px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-.subtitlesP{
-  margin: 8px 0 14px 0;
-  text-align: center;
-}
-.subtitlesP p{
-  font-size: 14px;
-}
-
-.titlebar{
-  font-size: 24px;
-  margin-bottom: 3%;
-  color: #C79D68;
-}
-
-.programButtons{
-  padding-top: 4%
-}
-.programButtons a{
-  text-decoration: none;
-}
-
-
-.programImage a{
-  transition: transform 1s ease-in;
-}
-
-.contentInfo p{
-  color: rgb(87, 87, 87);
-}
-
-.messageHeader{
-  position: absolute;
-  top: -20px;
-  left: 12px;
-  background-color: #3F281D;
-  padding: 10px 20px;
-  border-radius: 2px;
-  color: white;
-}
-
-.messageHeader p{
-  color: white;
-}
-
-
-
-.MessageBox{
-  margin-top: 3%;
-  background-color: #FFFBF6;
-  position: relative;
-  padding: 20px 0;
-  border: 0.5px solid #00A400;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 5px 6px  rgba(71, 71, 71, 28%) ;
-  -moz-box-shadow: 0 10px 6px  rgba(71, 71, 71, 28%) ;
-       box-shadow: 0 10px 6px  rgba(71, 71, 71, 28%);
-}
-
-.messageHeader{
-  position: absolute;
-  top: -20px;
-  left: 12px;
-  background-color: #3F281D;
-  padding: 6px 20px;
-  border-radius: 2px;
-  color: white;
-}
-
-.messageHeader p{
-  color: white;
-}
-
-.sideflx{
+.rsvp-container {
+  width: 100%;
+  max-width: 420px;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.accountName h3{
-  margin-left: 100px;
+/* Header Section */
+.rsvp-header {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.whiteh3{
-  color: rgb(0, 0, 0);
-}
-
-.whiteh3 h3{
+.rsvp-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4682B4, #FF69B4);
+  border-radius: 50%;
   display: flex;
+  align-items: center;
   justify-content: center;
+  margin: 0 auto 12px;
 }
 
-.accountName{
-  margin: 10px -2px;
-  padding: 5px 46px;
-
+.rsvp-icon svg {
+  width: 28px;
+  height: 28px;
+  color: white;
 }
-.accountName p{
-  color: black;
+
+.rsvp-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.rsvp-subtitle {
+  color: #666;
   font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
 }
 
-.colorChangeGold{
-  background-color: #ffffff;
+/* Contacts Card */
+.contacts-card {
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 245, 250, 1) 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(70, 130, 180, 0.2);
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
-.colorChangeGoldborder{
-  background-color: white;
+.card-header {
+  background: #4682B4;
+  padding: 15px 20px;
+  text-align: center;
 }
 
-.bank{
-  border: 1px solid #00A400;
-  border-radius: 4px;
+.card-header span {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.contacts-list {
+  padding: 8px;
+}
+
+.contact-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 10px;
-  width: 350px;
-  transform: translateX(5px);
+  padding: 14px 16px;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(70, 130, 180, 0.1);
 }
 
-.bankTitle{
-  border: 1px solid #00A400;
-  padding: 6px 5px;
-  border-radius: 4px;
-  background-color: #FFFBF6;
-  margin-left: -10px;
-  transform: translateX(-15px);
+.contact-item:last-child {
+  margin-bottom: 0;
 }
 
-.bankLogo img{
-  width: 50px;
-  transform: translateX(-100%);
+.contact-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(70, 130, 180, 0.15);
+  border-color: rgba(70, 130, 180, 0.3);
 }
 
-
-.bankHouseHolder{
+.contact-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 40px;
+  gap: 4px;
 }
 
-.bankTitle h3{
-  color: #00A400;
-}
-.bankTitle span{
+.contact-name {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 600;
+  color: #333;
 }
 
-.wTitle{
+.contact-phone {
+  font-size: 14px;
+  color: #4682B4;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.call-btn {
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #4682B4, #5a9fd4);
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 50px 0 40px 0;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.wTitle p{
-  color: #C79D68;
+.call-btn svg {
+  width: 20px;
+  height: 20px;
+  color: white;
 }
 
-.colorChangeGold{
-  margin-top: 40px;
+.contact-item:hover .call-btn {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(70, 130, 180, 0.4);
 }
 
-.bankTitle a{
-  text-decoration: none;
-  list-style: none;
+/* WhatsApp Section */
+.whatsapp-section {
+  text-align: center;
+  margin-top: 5px;
 }
 
-
-@media (max-width: 817px) {
-
-  .titlebar{
-    font-size: 20px;
-    padding: 2% 0 1% 0;
-  }
-  .subtitlesP{
-    font-size: 16px;
-    margin-bottom: 2%;
-  }
-  .subtitlesP p{
-    font-size: 16px;
-  }
-  .MessageBox{
-    margin-top: 6%;
-    padding: 10px 0px;
-  }
-  .accountName h3{
-    margin-left: 80px;
-  }
-
-
-
+.whatsapp-text {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 12px 0;
 }
-@media (max-width: 513px) {
-  .subtitlesP p{
-    font-size: 14px;
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-btn:active {
+  transform: translateY(0);
+}
+
+.whatsapp-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Thank You Section */
+.thank-you {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.thank-you p {
+  color: #888;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .contentInfo {
+    padding: 15px;
+    padding-top: 90px;
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
   }
 
-  .subtitlesP{
+  .rsvp-container {
+    max-width: 340px;
+  }
+
+  .rsvp-header {
+    margin-bottom: 20px;
+  }
+
+  .rsvp-icon {
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
   }
 
-  .bank{
-    width: 300px;
-    transform: translateX(5px);
+  .rsvp-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
-  .bankTitle{
-    margin-left: -10px;
-    transform: translateX(-15px);
+  .rsvp-title {
+    font-size: 22px;
   }
 
-  .bankLogo img{
-    transform: translateX(-40%);
-  }
-  .wTitle{
-    margin: 30px 0 20px 0;
-  }  
-  
-  .titlebar{
-    padding: 0 0 10px 0;
+  .rsvp-subtitle {
+    font-size: 13px;
   }
 
-}
-@media (max-width: 430px){
-  .accountName{
-    padding: 5px 20px;
-  }
-  .accountName h3{
-    font-size: 18px;
-  }
-  .subtitlesP p{
-    font-size: 12px;
+  .contacts-card {
+    border-radius: 12px;
   }
 
-  .bank{
-    width: 250px;
-    transform: translateX(2px);
+  .card-header {
+    padding: 12px 16px;
   }
 
-  .bankTitle{
-    margin-left: -10px;
-    transform: translateX(-5px);
-  }
-  .bankLogo img{
-    transform: translateX(0%);
-  }
-  .bankTitle h3{
+  .card-header span {
     font-size: 14px;
   }
-  .bankTitle span{
-    font-size: 12px;
-    font-weight: 300;
+
+  .contacts-list {
+    padding: 6px;
   }
-  .titlebar{
-    padding: 0 0 4px 0;
+
+  .contact-item {
+    padding: 12px 14px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+  }
+
+  .contact-name {
+    font-size: 15px;
+  }
+
+  .contact-phone {
+    font-size: 13px;
+  }
+
+  .call-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .call-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .whatsapp-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .thank-you {
+    margin-top: 18px;
+  }
+
+  .thank-you p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contentInfo {
+    padding: 12px;
+    padding-top: 80px;
+    height: calc(100vh - 55px);
+    height: calc(100dvh - 55px);
+  }
+
+  .rsvp-container {
+    max-width: 300px;
+  }
+
+  .rsvp-header {
+    margin-bottom: 15px;
+  }
+
+  .rsvp-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 8px;
+  }
+
+  .rsvp-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .rsvp-title {
+    font-size: 20px;
+  }
+
+  .rsvp-subtitle {
+    font-size: 12px;
+  }
+
+  .contacts-card {
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .card-header {
+    padding: 10px 14px;
+  }
+
+  .card-header span {
+    font-size: 13px;
+  }
+
+  .contacts-list {
+    padding: 5px;
+  }
+
+  .contact-item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .contact-name {
+    font-size: 14px;
+  }
+
+  .contact-phone {
+    font-size: 12px;
+  }
+
+  .call-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .call-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .whatsapp-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .whatsapp-btn {
+    padding: 11px 22px;
+    font-size: 13px;
+    border-radius: 22px;
+  }
+
+  .whatsapp-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .thank-you {
+    margin-top: 15px;
+  }
+
+  .thank-you p {
+    font-size: 12px;
   }
 }

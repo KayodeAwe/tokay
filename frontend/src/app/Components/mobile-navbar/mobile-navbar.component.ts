@@ -5,11 +5,16 @@ import { Router } from '@angular/router';
   selector: 'app-mobile-navbar',
   templateUrl: './mobile-navbar.component.html',
   styleUrls: ['./mobile-navbar.component.css'],
-  outputs : ['SwitchHome', 'SwitchProgram', 'SwitchMessage', 'SwitchGift', 'SwitchRsvp']
+  outputs: [
+    'SwitchHome',
+    'SwitchProgram',
+    'SwitchMessage',
+    'SwitchGift',
+    'SwitchRsvp',
+  ],
 })
 export class MobileNavbarComponent implements OnInit {
-
-  constructor(private route:Router) { }
+  constructor(private route: Router) {}
   dataGift = false;
   dataRegister = false;
   dataProgram = false;
@@ -23,44 +28,40 @@ export class MobileNavbarComponent implements OnInit {
   public SwitchGift = new EventEmitter();
   public SwitchRsvp = new EventEmitter();
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  directHome(){
-    this.route.navigate([''])
+  directHome() {
+    this.route.navigate(['']);
     this.dataGift = false;
     this.dataRegister = false;
     this.dataProgram = false;
     this.dataHome = true;
     this.SwitchHome.emit();
   }
-  directHomeSwitch(){
+  directHomeSwitch() {
     this.dataGift = false;
     this.dataRegister = false;
     this.dataProgram = false;
     this.dataHome = true;
   }
 
-  directProgram(){
-    this.route.navigate(['/program'])
+  directProgram() {
+    this.route.navigate(['/program']);
     this.dataGift = false;
     this.dataRegister = false;
     this.dataProgram = true;
     this.dataHome = false;
     this.SwitchProgram.emit();
   }
-  directProgramSwitch(){
+  directProgramSwitch() {
     this.dataGift = false;
     this.dataRegister = false;
     this.dataProgram = true;
     this.dataHome = false;
   }
 
-
-
-
-  directMessage(){
-    this.route.navigate(['/register'])
+  directMessage() {
+    this.route.navigate(['/location']);
     this.dataGift = false;
     this.dataRegister = true;
     this.dataProgram = false;
@@ -68,36 +69,32 @@ export class MobileNavbarComponent implements OnInit {
     this.SwitchMessage.emit();
   }
 
-  directMessageSwitch(){
+  directMessageSwitch() {
     this.dataGift = false;
     this.dataRegister = true;
     this.dataProgram = false;
     this.dataHome = false;
   }
 
-
-  directGifts(){
-    this.route.navigate(['/gift'])
+  directGifts() {
+    this.route.navigate(['/gift']);
     this.dataGift = true;
     this.dataRegister = false;
     this.dataProgram = false;
     this.dataHome = false;
-    this.SwitchGift.emit()
+    this.SwitchGift.emit();
   }
-  directGiftsSwitch(){
+  directGiftsSwitch() {
     this.dataGift = true;
     this.dataRegister = false;
     this.dataProgram = false;
     this.dataHome = false;
   }
 
-
-
-  directRsvp(){
+  directRsvp() {
     this.dataGift = false;
     this.dataRegister = false;
     this.dataProgram = false;
     this.dataHome = false;
   }
-
 }
